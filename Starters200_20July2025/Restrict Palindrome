@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin >> t;
+	while(t--){
+	    int n;
+	    cin >> n;
+	    string y="";
+	    for(int i=0;i<n;i++){
+	        if(i%5==0){
+	            y=y+"a";
+	        }
+	        if(i%5==1){
+	            y=y+"b";
+	        }
+	        if(i%5==2){
+	            y=y+"c";
+	        }
+	        if(i%5==3){
+	            y=y+"d";
+	        }
+	        if(i%5==4){
+	            y=y+"e";
+	        }
+	    }
+	    cout << y << endl;
+	}
+
+}
