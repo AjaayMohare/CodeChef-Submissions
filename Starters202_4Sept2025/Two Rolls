@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin >> t;
+	while(t--){
+	    int x,y;
+	    cin >> x >> y;
+	    map<int,int> m;
+	    for(int i=y;i<=y+5;i++){
+	        for(int j=y;j<=y+5;j++){m[i+j]++;}
+	    }
+	    if(m[50-x]>0){
+	        cout << "Yes" << endl;
+	    }
+	    else{
+	        cout << "No" << endl;
+	    }
+	}
+
+}
