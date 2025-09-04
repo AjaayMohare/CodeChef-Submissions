@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin >> t;
+	while(t--){
+	    int n;
+	    cin >> n;
+	    vector<int> a(n);
+	    for(int i=0;i<n;i++){
+	        cin >> a[i];
+	    }
+	    vector<int> v=a;
+	    sort(a.begin(),a.end());
+	   // int q = a[n/2 - 1];
+	   // int in=-1;
+	   // int c=0;
+	   // vector<int> w;
+	   // for(int i=0;i<n;i++){
+	   //     if(q==v[i]){
+	   //         c++;
+	   //         w.push_back(i);
+	   //     }
+	   // }
+	   // if(v[n-1]!=q && c==1){
+	   //     cout << -1 << endl;
+	   // }
+	   // else{
+	   //     cout << w[w.size()-1] << " " << w[w.size()-1]+1 << endl;
+	   // }
+	   if(v==a){
+	       cout << -1 << endl;
+	   }
+	   else{
+	       for(int i=0;i<n-1;i++){
+	           if(v[i]>v[i+1]){
+	               cout << i+1 << " " << i+2 << endl;
+	               break;
+	           }
+	       }
+	   }
+	    
+	}
+
+}
+
