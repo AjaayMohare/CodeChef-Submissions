@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+long long max_ele(long long a, long long b) {
+    if (a > b){ return a;}
+    return b;
+}
+
+long long min_ele(long long a, long long b) {
+    if (a < b) {return a;}
+    return b;
+}
+
+int main() {
+    int t;
+    scanf("%d", &t);
+
+    for (int k = 0; k < t; k++) {
+        int n, q;
+        scanf("%d %d", &n, &q);
+
+        long long arr[n];
+        for (int i = 0; i < n; i++) {
+            scanf("%lld", &arr[i]);
+        }
+
+        long long ans = arr[0];
+        for (int j = 1; j < n; j++) {
+            if ((j + 1) % 2 == 0) {
+                ans = max_ele(ans, arr[j]);
+            } else {
+                ans = min_ele(ans, arr[j]);
+            }
+        }
+
+        printf("%lld\n", ans);
+    }
+
+    return 0;
+}
