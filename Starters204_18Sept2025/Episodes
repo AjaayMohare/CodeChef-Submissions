@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+int t;
+cin >> t;
+while(t--){
+        int n,k;
+    cin >> n >> k;
+    int le = n*k;
+    int h=(n*k)/60;
+    int m=(n*k)%60 ;
+    cout << h << " " << m << endl;
+}
+}
