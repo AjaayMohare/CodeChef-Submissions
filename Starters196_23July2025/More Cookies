@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int z;
+    cin >> z;
+
+    while (z--) {
+        int x, y;
+        cin >> x >> y;
+
+        vector<int> v(x);
+        map<int, int> mp;
+
+        for (int i = 0; i < x; i++) {
+            cin >> v[i];
+            mp[v[i]]++;
+        }
+
+        sort(v.begin(), v.end());
+
+        int ans = 0;
+
+        while (true) {
+            if (v[0] >= y) {
+                ans = v[0] - y + 1;
+                y += ans;
+            }
+
+            if (mp[y]) {
+                ans++;
+                mp[y]--;
+                y++;
+            } else {
+                break;
+            }
+        }
+
+        cout << ans << endl;
+    }
+
+    return 0;
+}
