@@ -1,0 +1,62 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+     int t;
+     cin >> t;
+     while(t--){
+         int n;
+         cin >> n;
+         int a=2,b=1;
+         if( n%2==0){
+            //  for(int i=1;i<=n;i++){
+            //      if(i%2==0){
+            //          cout << a << " ";
+            //          a=a+2;
+            //      }
+            //      else{
+                     
+            //          cout << b << " ";
+            //          b=b+2;
+            //      }
+            //  }
+            //               cout << endl;
+             for(int i=1;i<=n;i++){
+                 printf("%d",i);
+                 printf(" ");
+                 i++;
+             }
+                        for(int i=2;i<=n;i++){
+                 printf("%d",i);
+
+                 printf(" ");
+                 i++;
+             }
+             cout << endl;
+
+         }
+         else{
+        //                 for(int i=1;i<=n;i++){
+        //          cout << i << " ";
+        //          i++;
+        //      }
+        //      for(int i=2;i<n;i++){
+        //          cout << i << " ";
+        //          i++;
+        //      }
+             for(int i=1;i<=n;i++){
+                 printf("%d",i);
+                 printf(" ");
+                 i++;
+             }
+                        for(int i=2;i<n;i++){
+                 printf("%d",i);
+
+                 printf(" ");
+                 i++;
+             }
+             cout << endl;
+         }
+     }
+}
