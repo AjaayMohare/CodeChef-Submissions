@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+        string s;
+        cin >> s;
+        map<char,int> m;
+        m[s[0]]++;
+        m[s[1]]++;
+        m[s[2]]++;
+        if(m.size()==3 && m['c'] && m['a']&&m['t']){
+            cout << "yes" << endl;
+        }
+        else{
+            cout << "no" << endl;
+        }
+}
