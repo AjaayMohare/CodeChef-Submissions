@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+     int t;
+     cin >> t;
+     while(t--){
+         int n;
+         cin >> n;
+         vector<int>v;
+         vector <vector<int>> final(n+1);
+         for(int i=1;i<n;i++){
+             int q = __gcd(i,n);
+             final[q].push_back(i);
+             
+             
+         }
+         sort(final.begin(),final.end());
+          reverse(final.begin(),final.end());
+          cout << n << " ";
+         for(int i=0;i<=n;i++){
+             for(int j=0;j<final[i].size();j++){
+                 cout << final[i][j] << " ";
+             }
+         }
+         cout << endl;
+     }
+}
