@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin >> t;
+	while(t--){
+	 
+	    int x,y;
+	    cin >> x >> y;
+	    int ev=0,od=0;
+	    for(int i=x;i<=y;i++){
+	        if(i%x==0){
+	            if(i%2==0){
+	                ev+=i;
+	            }
+	            else{
+	                od+=i;
+	            }
+	        }
+	    }
+	   // cout << ev << " " << od << endl;
+	    if(ev>=od){
+	        cout << "yes" << endl;
+	    }
+	    else{
+	        cout << "no" << endl;
+	    }
+	}
+
+}
